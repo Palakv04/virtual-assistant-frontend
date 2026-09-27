@@ -3,7 +3,7 @@ import React, { createContext, useEffect, useState } from 'react'
 axios.defaults.withCredentials = true;
 export const userDataContext = createContext()
 function UserContext({ children }) {
-const serverUrl = import.meta.env.VITE_API_URL
+const serverUrl = import.meta.env.VITE_API_URL || "http://localhost:8000"
   const [userData, setUserData] = useState(null)
   const [frontendImage, setFrontendImage] = useState(null)
   const [backendImage, setBackendImage] = useState(null)
